@@ -1,0 +1,225 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Alata;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27.6px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header .header-button-right {
+    border-radius: 100%;
+}
+
+header .header-button-right a {
+    display: flex;
+    align-items: center;
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+header .header-button-right a:hover {
+    box-shadow: rgba(255, 255, 255, 0.37) 0px 8px 15px;
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+header .header-button-right a img {
+    border-radius: 100%;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+header .header-button-right a img:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(255, 255, 255, 0.37) 0px 8px 15px;
+}
+
+header .header-button-left {
+    transition: 0.5s;
+}
+
+header .header-button-left:hover {
+    box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.37);
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+header .header-button-left .clock {
+    background-color: #000;
+    color: rgba(255, 255, 255, 0.822);
+    padding: 10px;
+    transition: 0.5s;
+}
+
+header .header-button-left .clock:hover {
+    box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.37);
+    border-radius: 50px;
+    transform: translateY(-5px);
+}
+
+.time {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* estilização do menu responsivo */
+
+.overlay {
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 28px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    font-size: 34px;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 25px;
+    right: 45px;
+    font-size: 60px;
+
+}
+
+@media screen and (max-height: 458px) {
+    .overlay a {
+        font-size: 20px;
+    }
+
+    .overlay,
+    .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/* main */
+
+main {
+    background-color: #000;
+    padding: 250px;
+}
+
+.main-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-top-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.main-top-left a {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.main-top-left .linkedin {
+    text-decoration: none;
+    color: #0e77a8;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.main-top-left .linkedin:hover {
+    color: #00659b;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 6px rgba(146, 146, 146, 0.37);
+}
+
+.main-top-left .linkedin:focus {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.main-top-left .cv {
+    text-decoration: none;
+    color: #ff0000;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.main-top-left .cv:hover {
+    color: #b10000;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 6px rgba(146, 146, 146, 0.37);
+}
+
+.main-top-left .cv:focus {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.main-top-left .whatsapp {
+    text-decoration: none;
+    color: #4FCE5D;
+
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.main-top-left .whatsapp:hover {
+    color: #075e54;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 6px rgba(146, 146, 146, 0.37);
+}
+
+.main-top-left .whatsapp:focus {
+    transform: translateY(3px);
+    box-shadow: none;
+}
