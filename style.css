@@ -147,16 +147,21 @@ header .header-button-left .clock:hover {
 
 main {
     background-color: #000;
-    padding: 250px;
+    padding: 50px 50px 0 50px ;
 }
 
 .main-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main-top-left {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    gap: 70px;
 }
 
 .main-top-left a {
@@ -220,4 +225,20 @@ main {
 .main-top-left .whatsapp:focus {
     transform: translateY(3px);
     box-shadow: none;
+}
+
+.main-top-right{
+    
+}
+
+.main-top-right img{
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    opacity: 0.5;
+    transition: all 1.5s;
+}
+
+.main-top-right img:hover{
+    opacity: 0.3;
 }
