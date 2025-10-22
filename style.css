@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/digital-numbers');
+
 * {
     border: 0;
     margin: 0;
@@ -72,6 +75,7 @@ header .header-button-left .clock {
     color: rgba(255, 255, 255, 0.822);
     padding: 10px;
     transition: 0.5s;
+    font-family: 'Digital Numbers', sans-serif;
 }
 
 header .header-button-left .clock:hover {
@@ -147,14 +151,70 @@ header .header-button-left .clock:hover {
 
 main {
     background-color: #000;
-    padding: 50px 50px 0 50px ;
+}
+
+.main-top {
+    padding: 60px;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-title h1 {
+    position: relative;
+    color: #fff;
+    font-size: 2em;
+    font-family: sans-serif;
+}
+
+.main-title p {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
+
+.main-top .main-title-content {
+    padding: 20px 0 0 0;
+}
+
+.main-top .main-title-content p {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 1.1vw;
 }
 
 .main-top {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin: 0 10px 0 0;
+}
+
+.main-top-right {
+    padding: 20px;
 }
 
 .main-top-left {
@@ -162,6 +222,7 @@ main {
     flex-direction: row;
     justify-content: space-evenly;
     gap: 70px;
+    padding: 50px;
 }
 
 .main-top-left a {
@@ -171,14 +232,14 @@ main {
 
 .main-top-left .linkedin {
     text-decoration: none;
-    color: #0e77a8;
+    color: #fff;
     display: flex;
     align-items: center;
     transition: all 0.5s;
 }
 
 .main-top-left .linkedin:hover {
-    color: #00659b;
+    color: #b8b8b8;
     transform: translateY(-5px);
     box-shadow: 0px 8px 6px rgba(146, 146, 146, 0.37);
 }
@@ -188,16 +249,35 @@ main {
     box-shadow: none;
 }
 
+.main-top-left .github {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.main-top-left .github:hover {
+    color: #b8b8b8;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 6px rgba(146, 146, 146, 0.37);
+}
+
+.main-top-left .github:focus {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
 .main-top-left .cv {
     text-decoration: none;
-    color: #ff0000;
+    color: #fff;
     display: flex;
     align-items: center;
     transition: all 0.5s;
 }
 
 .main-top-left .cv:hover {
-    color: #b10000;
+    color: #b8b8b8;
     transform: translateY(-5px);
     box-shadow: 0px 8px 6px rgba(146, 146, 146, 0.37);
 }
@@ -209,7 +289,7 @@ main {
 
 .main-top-left .whatsapp {
     text-decoration: none;
-    color: #4FCE5D;
+    color: #fff;
 
     display: flex;
     align-items: center;
@@ -217,7 +297,7 @@ main {
 }
 
 .main-top-left .whatsapp:hover {
-    color: #075e54;
+    color: #b8b8b8;
     transform: translateY(-5px);
     box-shadow: 0px 8px 6px rgba(146, 146, 146, 0.37);
 }
@@ -227,18 +307,14 @@ main {
     box-shadow: none;
 }
 
-.main-top-right{
-    
-}
-
-.main-top-right img{
-    width: 350px;
-    height: 350px;
+.main-top-right img {
+    width: 150px;
+    height: 150px;
     border-radius: 100%;
     opacity: 0.5;
     transition: all 1.5s;
 }
 
-.main-top-right img:hover{
+.main-top-right img:hover {
     opacity: 0.3;
 }
