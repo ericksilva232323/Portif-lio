@@ -12,11 +12,7 @@ The website is fully responsive and designed to provide a smooth user experience
 ## 🛠️ Technologies Used
 - **HTML5**
 - **CSS3**
-- **JavaScript (ES6+)**
-- **Node.js**
-- **Prisma**
-- **JWT (JSON Web Token)**
-- **Payment API Integration**
+- **JavaScript**
 
 ## 💡 Features
 - Interactive and responsive layout  
