@@ -31,7 +31,10 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100vw;
     padding: 20px;
+    position: fixed;
+    z-index: 2;
 }
 
 header .header-button-right {
