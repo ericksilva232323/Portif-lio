@@ -350,13 +350,16 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 100px;
+    gap: 60px;
     font-family: sans-serif;
     padding: 50px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
 
     & h1 {
-        position: relative;
-        font-family: sans-serif;
+
         text-transform: uppercase;
         font-size: 2em;
         letter-spacing: 4px;
@@ -456,4 +459,73 @@ section {
         }
 
     }
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+section {
+
+    & .caroussel {
+        display: flex;
+        overflow: hidden;
+        padding: 60px 0;
+        background-color: #000;
+        white-space: nowrap;
+        position: relative;
+        width: 100%;
+
+        &:before,
+        :after {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            content: "";
+            z-index: 2;
+        }
+
+        &:before {
+            right: 0;
+            background: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0), 100%);
+        }
+
+        &:after {
+            left: 0;
+            background: linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0), 100%);
+        }
+
+        &:hover .caroussel-track {
+            animation-play-state: paused;
+        }
+
+        & .caroussel-track {
+            display: inline-block;
+            animation: 35s slide infinite linear;
+
+            & img {
+                height: 100px;
+                margin: 0 40px;
+
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    }
+
 }
