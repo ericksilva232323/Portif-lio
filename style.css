@@ -491,7 +491,6 @@ section {
             content: "";
             z-index: 2;
         }
-        
 
         &:before {
             right: 0;
